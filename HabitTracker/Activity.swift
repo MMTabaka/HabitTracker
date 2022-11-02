@@ -8,8 +8,13 @@
 import Foundation
 
 struct Activity: Identifiable, Codable, Equatable {
-    let id = UUID()
+    var id = UUID()
     let title: String
     let description: String
     var counter = 0
+    var lastCompleted: Date?
+    
+    var formattedLastCompleted: String {
+        lastCompleted?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+    }
 }

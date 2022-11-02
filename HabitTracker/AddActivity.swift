@@ -37,8 +37,7 @@ struct AddActivity: View {
                 }
             }
             .navigationTitle("Add new activity")
-            .alert("Failed", isPresented: $titleAlert) {
-                Text("Title is required")
+            .alert("Title is required", isPresented: $titleAlert) {
                 Button("OK", role: .cancel) {
                     
                 }

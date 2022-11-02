@@ -28,6 +28,8 @@ struct DetailView: View {
                         Button {
                             var activity2 = activity
                             activity2.counter += 1
+                            activity2.lastCompleted = Date.now
+                            
                             if let i = activities.items.firstIndex(of: activity) {
                                 activities.items[i] = activity2
                             }
@@ -37,11 +39,13 @@ struct DetailView: View {
                         }
                     }
                 } header: {
-                    Text("Add completion")
+                    Text("Add Completion")
+                } footer: {
+                    Text(activity.lastCompleted != nil ? "\(activity.formattedLastCompleted)" : "")
                 }
-                .navigationTitle(activity.title)
-            }
                 
+            }
+            .navigationTitle(activity.title)
     }
 }
 
