@@ -13,6 +13,7 @@ struct AddActivity: View {
     
     @State private var title = ""
     @State private var description = ""
+    @State private var titleAlert = false
     
     
     
@@ -26,11 +27,22 @@ struct AddActivity: View {
             .toolbar {
                 Button("Save") {
                     let activityItem = Activity(title: title, description: description)
-                    activities.items.append(activityItem)
-                    dismiss()
+                    if title != "" {
+                        activities.items.append(activityItem)
+                        dismiss()
+                    } else {
+                        titleAlert = true
+                    }
+                    
                 }
             }
             .navigationTitle("Add new activity")
+            .alert("Failed", isPresented: $titleAlert) {
+                Text("Title is required")
+                Button("OK", role: .cancel) {
+                    
+                }
+            }
         }
     }
 }

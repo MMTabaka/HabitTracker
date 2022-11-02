@@ -13,10 +13,12 @@ struct DetailView: View {
     
     var body: some View {
             List {
-                Section {
-                    Text(activity.description)
-                } header: {
-                    Text("Description")
+                if activity.description != "" {
+                    Section {
+                        Text(activity.description)
+                    } header: {
+                        Text("Description")
+                    }
                 }
                 
                 Section {
