@@ -15,11 +15,12 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(activities.items) { item in
-                    VStack {
-                        Text(item.title)
-                            .font(.title)
-                        Text(item.description)
-                            .font(.headline)
+                    NavigationLink {
+                        DetailView(activity: item, activities: activities)
+                    } label: {
+                        VStack(alignment: .leading) {
+                            Text(item.title)
+                        }
                     }
                 }
             }

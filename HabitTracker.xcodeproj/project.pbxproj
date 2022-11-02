@@ -14,6 +14,7 @@
 		FA087E112911742200C4E8F7 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA087E102911742200C4E8F7 /* Activity.swift */; };
 		FA087E132911745200C4E8F7 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA087E122911745200C4E8F7 /* Activities.swift */; };
 		FA087E172911765200C4E8F7 /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA087E162911765200C4E8F7 /* AddActivity.swift */; };
+		FA47B3F92911ECCB00C16431 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47B3F82911ECCB00C16431 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		FA087E102911742200C4E8F7 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FA087E122911745200C4E8F7 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		FA087E162911765200C4E8F7 /* AddActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivity.swift; sourceTree = "<group>"; };
+		FA47B3F82911ECCB00C16431 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		FA087DF6291172C300C4E8F7 = {
 			isa = PBXGroup;
 			children = (
+				FA47B3F82911ECCB00C16431 /* DetailView.swift */,
 				FA087E01291172C300C4E8F7 /* HabitTracker */,
 				FA087E00291172C300C4E8F7 /* Products */,
 			);
@@ -60,10 +63,10 @@
 				FA087E02291172C300C4E8F7 /* HabitTrackerApp.swift */,
 				FA087E04291172C300C4E8F7 /* ContentView.swift */,
 				FA087E122911745200C4E8F7 /* Activities.swift */,
+				FA087E162911765200C4E8F7 /* AddActivity.swift */,
 				FA087E102911742200C4E8F7 /* Activity.swift */,
 				FA087E06291172C400C4E8F7 /* Assets.xcassets */,
 				FA087E08291172C400C4E8F7 /* Preview Content */,
-				FA087E162911765200C4E8F7 /* AddActivity.swift */,
 			);
 			path = HabitTracker;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA087E132911745200C4E8F7 /* Activities.swift in Sources */,
+				FA47B3F92911ECCB00C16431 /* DetailView.swift in Sources */,
 				FA087E112911742200C4E8F7 /* Activity.swift in Sources */,
 				FA087E172911765200C4E8F7 /* AddActivity.swift in Sources */,
 				FA087E05291172C300C4E8F7 /* ContentView.swift in Sources */,
