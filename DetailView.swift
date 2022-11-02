@@ -12,23 +12,34 @@ struct DetailView: View {
     @ObservedObject var activities: Activities
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text(activity.description)
-                Text("\(activity.counter)")
-                Button {
-                    var activity2 = activity
-                    activity2.counter += 1
-                    if let i = activities.items.firstIndex(of: activity) {
-                        activities.items[i] = activity2
-                    }
-                    
-                } label: {
-                    Image(systemName: "plus.app")
+            List {
+                Section {
+                    Text(activity.description)
+                } header: {
+                    Text("Description")
                 }
-            }
+                
+                Section {
+                    HStack {
+                        Text("\(activity.counter)")
+                        Spacer()
+                        Button {
+                            var activity2 = activity
+                            activity2.counter += 1
+                            if let i = activities.items.firstIndex(of: activity) {
+                                activities.items[i] = activity2
+                            }
+                            
+                        } label: {
+                            Image(systemName: "plus.app")
+                        }
+                    }
+                } header: {
+                    Text("Add completion")
+                }
                 .navigationTitle(activity.title)
-        }
+            }
+                
     }
 }
 
