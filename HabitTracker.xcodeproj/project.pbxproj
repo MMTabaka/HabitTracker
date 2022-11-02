@@ -43,7 +43,6 @@
 		FA087DF6291172C300C4E8F7 = {
 			isa = PBXGroup;
 			children = (
-				FA47B3F82911ECCB00C16431 /* DetailView.swift */,
 				FA087E01291172C300C4E8F7 /* HabitTracker */,
 				FA087E00291172C300C4E8F7 /* Products */,
 			);
@@ -61,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				FA087E02291172C300C4E8F7 /* HabitTrackerApp.swift */,
+				FA47B3F82911ECCB00C16431 /* DetailView.swift */,
 				FA087E04291172C300C4E8F7 /* ContentView.swift */,
 				FA087E122911745200C4E8F7 /* Activities.swift */,
 				FA087E162911765200C4E8F7 /* AddActivity.swift */,

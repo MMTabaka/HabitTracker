@@ -8,9 +8,21 @@
 import Foundation
 
 class Activities: ObservableObject {
-    @Published var items: [Activity]
-    
+    @Published var items = [Activity]() {
+        didSet {
+            if let encoded = try? JSONEncoder().encode(items) {
+                UserDefaults.standard.set(encoded, forKey: "UserData")
+            }
+        }
+    }
+        
     init() {
-        self.items = []
+        if let savedItems = UserDefaults.standard.data(forKey: "UserData") {
+            if let decodedItems = try? JSONDecoder().decode([Activity].self, from: savedItems) {
+                items = decodedItems
+                return
+            }
+        }
+        items = []
     }
 }
